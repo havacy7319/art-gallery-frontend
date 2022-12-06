@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h1>Home</h1>
+    <v-text-field></v-text-field>
   </main>
 </template>
