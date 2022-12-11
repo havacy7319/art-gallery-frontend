@@ -1,8 +1,14 @@
 <script setup>
+import HomeComponent from '../components/HomeComponent.vue';
+
+
 </script>
 
 <template>
-  <main>
-    <v-text-field></v-text-field>
-  </main>
+  <v-container>
+    
+    <HomeComponent/> 
+  </v-container>
+ 
+
 </template>
