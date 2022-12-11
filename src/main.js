@@ -2,6 +2,8 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import axios from "axios"
 import VueAxios from "vue-axios"
+import piniaPersist from "pinia-plugin-persist";
+ 
 
 // Vuetify
 import 'vuetify/styles'
@@ -25,7 +27,9 @@ const app = createApp(App)
 // app.provide('axios', app.config.globalProperties.axios)  // provide 'axios'
 
 app.use(vuetify)
-app.use(createPinia())
+const pinia = createPinia()
+pinia.use(piniaPersist)
+app.use(pinia)
 app.use(router)
 
 app.mount('#app')

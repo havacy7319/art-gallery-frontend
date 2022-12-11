@@ -1,3 +1,9 @@
+<script setup>
+import { useUserStore } from '@/stores/user.store'
+const userStore = useUserStore()
+</script>
+
+
 <template>
    <v-navigation-drawer
         expand-on-hover
@@ -6,8 +12,8 @@
         <v-list>
           <v-list-item
             prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
-            title="Sandra Adams"
-            subtitle="sandra_a88@gmailcom"
+            :title="userStore.userName"
+            :subtitle="userStore.userEmail"
           ></v-list-item>
         </v-list>
 

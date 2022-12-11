@@ -1,13 +1,15 @@
 <script setup>
 import { reactive } from "@vue/reactivity";
-import { login } from "@/services/user.service"
+import { useUserStore } from '@/stores/user.store'
+const userStore = useUserStore()
 const state = reactive({
    email: "",
    password: "",
 })
 
 async function doLogin() {
-   await login({ email: state.email, password: state.password })
+   //await login({ email: state.email, password: state.password })
+   await userStore.doLogin({ email: state.email, password: state.password })
 }
 </script>
 
