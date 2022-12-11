@@ -1,6 +1,8 @@
 <script setup>
 import { reactive } from "@vue/reactivity";
 import { useUserStore } from '@/stores/user.store'
+import { router } from '@/router'
+
 const userStore = useUserStore()
 const state = reactive({
    email: "",
@@ -8,8 +10,8 @@ const state = reactive({
 })
 
 async function doLogin() {
-   //await login({ email: state.email, password: state.password })
    await userStore.doLogin({ email: state.email, password: state.password })
+   router.push('/items')
 }
 </script>
 

@@ -21,6 +21,12 @@ export const router = createRouter({
   },
 
   {
+    path:'/logout',
+    name:'logout',
+    component: () => import('../views/LogoutView.vue') 
+  },
+
+  {
     path:'/items',
     name: 'items',
     component: () => import('../views/ItemsView.vue')
