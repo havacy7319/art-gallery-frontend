@@ -17,7 +17,7 @@ async function doLogin() {
 
 <template>
    <v-card class="elevation-12">
-      <v-toolbar dark color="primary">
+      <v-toolbar color="secondary">
          <v-toolbar-title>Login</v-toolbar-title>
       </v-toolbar>
       <v-card-text>
@@ -30,7 +30,7 @@ async function doLogin() {
       </v-card-text>
       <v-card-actions>
          <v-spacer></v-spacer>
-         <v-btn color="primary" @click="doLogin">Login</v-btn>
+         <v-btn variant="flat"  color="secondary" @click="doLogin">Login</v-btn>
       </v-card-actions>
    </v-card>
 </template>

@@ -6,7 +6,6 @@ import HomeComponent from '../components/HomeComponent.vue';
 
 <template>
   <v-container>
-    
     <HomeComponent/> 
   </v-container>
  

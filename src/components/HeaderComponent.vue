@@ -11,7 +11,7 @@ const userStore = useUserStore()
       >
         <v-list>
           <v-list-item
-            prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
+            prepend-avatar="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
             :title="userStore.userName"
             :subtitle="userStore.userEmail"
           ></v-list-item>
@@ -20,10 +20,11 @@ const userStore = useUserStore()
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-folder" title="My Files" value="myfiles"></v-list-item>
-          <v-list-item prepend-icon="mdi-account-multiple" title="Shared with me" value="shared"></v-list-item>
+          <v-list-item prepend-icon="mdi-tooltip-account" title="Todas las Obras" value=""></v-list-item>
+          <v-list-item v-if="!userStore.isUserLogged"  prepend-icon="mdi-account-circle" title="Signup" value="signup" :to="{name: 'signup'}"></v-list-item>
           <v-list-item v-if="!userStore.isUserLogged"  prepend-icon="mdi-star" title="Login" value="login" :to="{name: 'login'}"></v-list-item>
           <v-list-item v-else prepend-icon="mdi-star" title="Logout" value="logout" :to="{name: 'logout'}"></v-list-item>
+          <v-list-item prepend-icon="mdi-cart" title="Carrito de la compra" value="cart"></v-list-item>
         </v-list>
       </v-navigation-drawer>
 

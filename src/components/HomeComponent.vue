@@ -1,77 +1,82 @@
+<script setup>
+import ItemsView from '../views/ItemsView.vue';
+</script>
+
 <template>
 
   <div>
-    <v-carousel hide-delimiters>
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-      cover
-    ></v-carousel-item>
-  </v-carousel>
+    <v-carousel  :show-arrows="false">
+      <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" cover></v-carousel-item>
+    </v-carousel>
+  </div>
+  <div class="bg-teal d-flex w-100 align-center px-4">
+    <v-btn color="secondary">Explorar Obras a la Venta</v-btn>
   </div>
 
-  <div class="d-flex align-center flex-column">
-    <div class="text-subtitle-2">With props</div>
-
-    <v-card
-      width="400"
-      title="This is a title"
-      subtitle="This is a subtitle"
-      text="This is content"
-    ></v-card>
-
-    <div class="mt-4 text-subtitle-2">With slots</div>
-
-    <v-card width="400">
-      <template v-slot:title>
-        This is a title
-      </template>
-
-      <template v-slot:subtitle>
-        This is a subtitle
-      </template>
-
-      <template v-slot:text>
-        This is content
-      </template>
-    </v-card>
-
-    <div class="mt-4 text-subtitle-2">With markup</div>
-
-    <v-card width="400">
-      <v-card-item>
-        <v-card-title>This is a title</v-card-title>
-
-        <v-card-subtitle>This is a subtitle</v-card-subtitle>
-      </v-card-item>
-
-      <v-card-text>
-        This is content
-      </v-card-text>
-    </v-card>
+  <div>
+      <ItemsView />
   </div>
+
+  <div>
+    <v-row>
+    <v-col
+      v-for="n in 9"
+      :key="n"
+      class="d-flex child-flex"
+      cols="4"
+    >
+      <v-img
+        :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
+        :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+        aspect-ratio="1"
+        cover
+        class="bg-grey-lighten-2"
+      >
+        <template v-slot:placeholder>
+          <v-row
+            class="fill-height ma-0"
+            align="center"
+            justify="center"
+          >
+            <v-progress-circular
+              indeterminate
+              color="grey-lighten-5"
+            ></v-progress-circular>
+          </v-row>
+        </template>
+      </v-img>
+    </v-col>
+  </v-row>
+  </div>
+
+  <div  class="bg-teal d-flex w-100 align-center px-4">
+    <v-btn color="secondary">Ver todos los Artistas</v-btn>
+    <v-btn color="secondary">Ver todas las Obras</v-btn>
+  </div>
+
 </template>
 
+
+
 <script>
-  export default {
-    data () {
-      return {
-        items: [
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
-      }
-    },
-  }
+export default {
+  data() {
+    return {
+      items: [
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+        },
+      ],
+    }
+  },
+}
 </script>
