@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import {login} from "@/services/user.service";
+import {login, updateProfile} from "@/services/user.service";
 export const useUserStore = defineStore({
   id: "user",
   state: () =>
@@ -20,6 +20,9 @@ export const useUserStore = defineStore({
     doLogout() {
       this.user = null;
     },
+    async doUpdate(profileData){
+      await updateProfile(this.user._id,profileData )
+    }
   },
   persist: {
     enabled: true,

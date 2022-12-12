@@ -13,3 +13,8 @@ export const login = async (loginData) => {
     const response = await api.post('/auth/login',loginData)
     return response.data
 }
+
+export const updateProfile = async (id,profileData) => {
+    const response = await api.put(`/users/${id}`,profileData)
+    return response.data
+}
