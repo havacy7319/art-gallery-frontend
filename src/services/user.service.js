@@ -24,3 +24,9 @@ export const getAllAuthors = async () => {
     const response = await api.get('/users')
     return response.data
 }
+
+export const getAuthor = async (id) => {
+    console.log('getAuthor')
+    const response = await api.get(`/users/${id}`)
+    return response.data
+}

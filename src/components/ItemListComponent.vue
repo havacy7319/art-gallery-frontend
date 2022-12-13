@@ -5,7 +5,12 @@ const props = defineProps(['items'])
 
 <template>
     <div>
-        <v-row>
+      <v-row>
+        <v-col align="center">
+          <h2>{{items.length}} obras</h2>
+        </v-col>
+      </v-row>
+        <v-row align="center">
             <v-col v-for="(item, idx) in items" :key="items.title" class="d-flex child-flex" cols="3">
                 <v-card class="mx-auto">
                     <v-img style="{width: '100px', height:'100px'}" :src="`https://picsum.photos/500/300?image=${idx * 5 + 10}`"

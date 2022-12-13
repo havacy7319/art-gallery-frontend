@@ -39,6 +39,13 @@ export const router = createRouter({
     },
 
     {
+      path: '/author/:id',
+      name: 'author',
+      props: true,
+      component: () => import('../views/AuthorView.vue')
+    },
+
+    {
       path: '/profile',
       name: 'profile',
       component: () => import('../views/ProfileView.vue')

@@ -1,5 +1,4 @@
 
-
 <script setup>
 import AuthorListComponent from '@/components/AuthorListComponent.vue';
 

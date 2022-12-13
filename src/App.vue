@@ -8,7 +8,7 @@ import HeaderComponent from './components/HeaderComponent.vue'
   <v-app>
     <HeaderComponent />
     
-    <h1><v-icon icon="mdi-antenna" size="large"></v-icon> OscarArtGallery</h1>
+    <h1><v-icon icon="mdi-ArrowDecisionAutoOutline" size="large"></v-icon> OscarArtGallery</h1>
     <RouterView />
     <FooterComponent />
   </v-app>

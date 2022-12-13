@@ -3,10 +3,10 @@
 </script>
 
 <template>
-    <v-container fluid>
-        <v-card v-for="(author, idx ) in authors" :key="idx">
+    <v-container fluid >
+        <v-card v-for="(author, idx ) in authors" :key="idx" class="d-flex align-center flex-column">
             <v-card-title>
-                    {{author.name}}
+                  <router-link :to="{name: 'author', params:{id:author._id}}">{{author.name}}</router-link>  
             </v-card-title>
             <v-card-subtitle>
                     {{author.descriptionShort}}
