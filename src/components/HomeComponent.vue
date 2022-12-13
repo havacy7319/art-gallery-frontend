@@ -1,5 +1,18 @@
 <script setup>
 import ItemsView from '../views/ItemsView.vue';
+import { getAllItems } from '@/services/items.service'
+import ItemListComponent from '../components/ItemListComponent.vue';
+import { reactive } from '@vue/reactivity';
+import { onBeforeMount } from '@vue/runtime-core';
+
+const state = reactive({
+    allItems: []
+})
+
+onBeforeMount(async() => {
+    const items = await getAllItems()
+    state.allItems = items
+})
 </script>
 
 <template>
@@ -13,42 +26,7 @@ import ItemsView from '../views/ItemsView.vue';
     <v-btn color="secondary">Explorar Obras a la Venta</v-btn>
   </div>
 
-  <div>
-      <ItemsView />
-  </div>
-
-  <div>
-    <v-row>
-    <v-col
-      v-for="n in 9"
-      :key="n"
-      class="d-flex child-flex"
-      cols="4"
-    >
-      <v-img
-        :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-        :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-        aspect-ratio="1"
-        cover
-        class="bg-grey-lighten-2"
-      >
-        <template v-slot:placeholder>
-          <v-row
-            class="fill-height ma-0"
-            align="center"
-            justify="center"
-          >
-            <v-progress-circular
-              indeterminate
-              color="grey-lighten-5"
-            ></v-progress-circular>
-          </v-row>
-        </template>
-      </v-img>
-    </v-col>
-  </v-row>
-  </div>
-
+  <ItemListComponent v-if="state.allItems.length" :items="state.allItems"/>
   <div  class="bg-teal d-flex w-100 align-center px-4">
     <v-btn color="secondary">Ver todos los Artistas</v-btn>
     <v-btn color="secondary">Ver todas las Obras</v-btn>
