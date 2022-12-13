@@ -18,3 +18,9 @@ export const updateProfile = async (id,profileData) => {
     const response = await api.put(`/users/${id}`,profileData)
     return response.data
 }
+
+export const getAllAuthors = async () => {
+    console.log('getAllAuthors')
+    const response = await api.get('/users')
+    return response.data
+}
