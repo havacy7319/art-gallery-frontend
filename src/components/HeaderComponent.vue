@@ -20,8 +20,8 @@ const userStore = useUserStore()
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-tooltip-account" title="Todas las Obras" value=""></v-list-item>
-          <v-list-item v-if="!userStore.isUserLogged"  prepend-icon="mdi-account-circle" title="Signup" value="signup" :to="{name: 'signup'}"></v-list-item>
+          <v-list-item prepend-icon="mdi-tooltip-account" title="Todas las Obras" value="items" :to="{name: 'items'}"></v-list-item>
+          <v-list-item prepend-icon="mdi-account-circle" title="Artistas" value="arthors" :to="{name: 'authors'}"></v-list-item>
           <v-list-item v-if="!userStore.isUserLogged"  prepend-icon="mdi-star" title="Login" value="login" :to="{name: 'login'}"></v-list-item>
           <v-list-item v-else prepend-icon="mdi-star" title="Logout" value="logout" :to="{name: 'logout'}"></v-list-item>
           <v-list-item prepend-icon="mdi-cart" title="Carrito de la compra" value="cart"></v-list-item>

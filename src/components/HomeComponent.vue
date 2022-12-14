@@ -6,33 +6,39 @@ import { reactive } from '@vue/reactivity';
 import { onBeforeMount } from '@vue/runtime-core';
 
 const state = reactive({
-    allItems: []
+  allItems: []
 })
 
-onBeforeMount(async() => {
-    const items = await getAllItems()
-    state.allItems = items
+onBeforeMount(async () => {
+  const items = await getAllItems()
+  state.allItems = items
 })
 </script>
 
 <template>
 
   <div>
-    <v-carousel  :show-arrows="false">
+    <v-carousel :show-arrows="false">
       <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" cover></v-carousel-item>
     </v-carousel>
   </div>
+  <div>
+    
+  </div>
+
   <div class="bg-teal d-flex w-100 align-center px-4">
-    <v-btn color="secondary" outline block>Explorar Obras a la Venta</v-btn>
+    <v-btn color="secondary" outline block>Ver todos los Artistas
+      <v-icon icon='mdi-ArrowDecisionAutoOutline'></v-icon>
+    </v-btn>
   </div>
 
-  <ItemListComponent v-if="state.allItems.length" :items="state.allItems"/>
-  <div  class="bg-teal d-flex w-100 align-center px-4">
-    <v-btn color="secondary" outline block>Ver todos los Artistas</v-btn>
-   
+  <ItemListComponent v-if="state.allItems.length" :items="state.allItems" />
+  <div class="bg-teal d-flex w-100 align-center px-4">
+    <v-btn color="secondary" outline block>Explorar todas las Obras</v-btn>
+
   </div>
 
- 
+
 
 </template>
 
@@ -62,7 +68,7 @@ export default {
 </script>
 
 <style scoped>
-  v-btn {
-    align-content: center;
-  }
+v-btn {
+  align-content: center;
+}
 </style>

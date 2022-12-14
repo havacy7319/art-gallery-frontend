@@ -12,7 +12,7 @@
       </v-img>
     </v-card>
   
-    <v-container fluid>
+    <v-container fluid style="width: 85%;">
   
       <v-row>
         <v-col>
