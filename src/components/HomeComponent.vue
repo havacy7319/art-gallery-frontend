@@ -23,14 +23,16 @@ onBeforeMount(async() => {
     </v-carousel>
   </div>
   <div class="bg-teal d-flex w-100 align-center px-4">
-    <v-btn color="secondary">Explorar Obras a la Venta</v-btn>
+    <v-btn color="secondary" outline block>Explorar Obras a la Venta</v-btn>
   </div>
 
   <ItemListComponent v-if="state.allItems.length" :items="state.allItems"/>
   <div  class="bg-teal d-flex w-100 align-center px-4">
-    <v-btn color="secondary">Ver todos los Artistas</v-btn>
-    <v-btn color="secondary">Ver todas las Obras</v-btn>
+    <v-btn color="secondary" outline block>Ver todos los Artistas</v-btn>
+   
   </div>
+
+ 
 
 </template>
 
@@ -58,3 +60,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+  v-btn {
+    align-content: center;
+  }
+</style>
