@@ -10,3 +10,7 @@ export const getAllItems = async () => {
     return response.data
 }
 
+export const publish = async (newItemData) => {
+    const response = await api.post('/items/publish',newItemData)
+    return response.data
+}

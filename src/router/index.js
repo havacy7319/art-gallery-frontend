@@ -46,6 +46,13 @@ export const router = createRouter({
     },
 
     {
+      path: '/publish',
+      name: 'publish',
+      props: true,
+      component: () => import('../views/PublishItemView.vue')
+    },
+
+    {
       path: '/profile',
       name: 'profile',
       component: () => import('../views/ProfileView.vue')
