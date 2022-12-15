@@ -27,14 +27,14 @@ onBeforeMount(async () => {
   </div>
 
   <div class="bg-teal d-flex w-100 align-center px-4">
-    <v-btn color="secondary" outline block>Ver todos los Artistas
+    <v-btn color="secondary" outline block :to="{name: 'authors'}">Ver todos los Artistas
       <v-icon icon='mdi-ArrowDecisionAutoOutline'></v-icon>
     </v-btn>
   </div>
 
   <ItemListComponent v-if="state.allItems.length" :items="state.allItems" />
   <div class="bg-teal d-flex w-100 align-center px-4">
-    <v-btn color="secondary" outline block>Explorar todas las Obras</v-btn>
+    <v-btn color="secondary" outline block :to="{name: 'items'}">Explorar todas las Obras</v-btn>
 
   </div>
 

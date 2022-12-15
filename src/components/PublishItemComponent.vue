@@ -30,7 +30,7 @@ const userStore = useUserStore()
         </v-row>
         <v-row>
           <v-col>
-            <v-text-field label="Precio" v-model.number="state.price" suffix="€"></v-text-field>
+            <v-text-field label="Precio" v-model.number="state.price" prefix="€"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
