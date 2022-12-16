@@ -16,6 +16,7 @@ onBeforeMount(async () => {
 </script>
 
 <template>
+  
 
   <div>
     <v-carousel :show-arrows="false">
@@ -31,6 +32,8 @@ onBeforeMount(async () => {
       <v-icon icon='mdi-ArrowDecisionAutoOutline'></v-icon>
     </v-btn>
   </div>
+
+  
 
   <ItemListComponent v-if="state.allItems.length" :items="state.allItems" />
   <div class="bg-teal d-flex w-100 align-center px-4">

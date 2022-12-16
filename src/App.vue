@@ -2,24 +2,28 @@
 import { RouterLink, RouterView } from 'vue-router'
 import FooterComponent from './components/FooterComponent.vue'
 import HeaderComponent from './components/HeaderComponent.vue'
+import img from './assets/vac.jpg'
 
 </script>
 
 <template>
-  <v-parallax
-    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+
+
+  <v-app class="app">
+    <v-parallax
+    :src="img"
   >
-  <div>
-    <v-app>
     <HeaderComponent />
-    
     <h1> OscarArtGallery</h1>
     <RouterView />
     <FooterComponent />
+
+    
+  </v-parallax>
   </v-app>
-  </div>
- 
-</v-parallax>
+
+
+
 
 </template>
 
@@ -34,7 +38,9 @@ h1 {
   color: #f0eded;
   text-align: center;
 }
-</style>>
+
+
+</style>
 
 
 

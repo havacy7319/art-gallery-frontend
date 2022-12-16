@@ -1,6 +1,6 @@
 <template>
-    <v-footer class="d-flex flex-column">
-      <div class="bg-teal d-flex w-100 align-center px-4">
+    <v-footer class="d-flex flex-column" app absolute>
+      <div class="bg-teal d-flex w-100 align-center">
         <strong></strong>
   
         <v-spacer></v-spacer>

@@ -16,7 +16,7 @@ const state = reactive({
 onBeforeMount( async() => {
     state.author = await getAuthor(props.id)
     const items = await getAllItems()
-    state.items = items.filter(x => x.author === props.id)
+    state.items = items.filter(x => x.author._id == props.id)
 })
 
 
@@ -25,6 +25,7 @@ onBeforeMount( async() => {
 
 <template>
     <AuthorComponent  v-if="state.author"  :author="state.author" />
-    <ItemListComponent v-if="state.items.length > 0" :items="state.items"/>
+    <div v-if="state.items.length">hola</div>
+    <ItemListComponent v-if="state.items.length > 0"  :items="state.items"/>
 </template>
 

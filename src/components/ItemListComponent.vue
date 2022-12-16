@@ -8,11 +8,11 @@ const props = defineProps(['items'])
   <div>
     <v-row>
       <v-col align="center">
-        <h2>{{ items.length }} obras</h2>
+        <h2>{{ items.length }} Obras</h2>
       </v-col>
     </v-row>
     <v-row align="center">
-      <v-col v-for="(item) in items" :key="item.title" class="d-flex child-flex" cols="3">
+      <v-col v-for="(item) in items" :key="item.title" class="d-flex child-flex" cols="4">
       <ItemComponent :item="item"/>
       </v-col>
     </v-row>

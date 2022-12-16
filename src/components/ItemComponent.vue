@@ -7,22 +7,26 @@ import { ref } from "@vue/reactivity"
 
 <template>
       <v-card class="mx-auto">
-          <v-img :style="{width: '240px', height:'180px'}" :src="`https://picsum.photos/500/300?image=5`"
-            :lazy-src="`https://picsum.photos/10/6?image=5`" aspect-ratio="1" cover
+
+
+         <v-img :style="{width: '440px', height:'280px'}" :src="item.img" aspect-ratio="1" cover
             class="bg-grey-lighten-2">
-            <template v-slot:placeholder>
+          <template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular indeterminate color="grey-lighten-5"></v-progress-circular>
               </v-row>
             </template>
           </v-img>
 
+
           <v-card-title>
             {{ item.title }}
           </v-card-title>
 
-          <v-card-subtitle>
-            {{item.author.name}}
+          <v-card-subtitle >
+            <router-link :to="{name: 'author', params:{id:item.author._id}}">{{item.author.name}}</router-link>
+            
+            
           </v-card-subtitle>
 
           <v-card-actions>
