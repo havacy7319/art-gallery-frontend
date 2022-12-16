@@ -26,7 +26,7 @@ const userStore = useUserStore()
           <v-list-item prepend-icon="mdi-publish" title="Publicar" value="publish" :to="{name: 'publish'}"></v-list-item>
           <v-list-item v-if="!userStore.isUserLogged"  prepend-icon="mdi-star" title="Login" value="login" :to="{name: 'login'}"></v-list-item>
           <v-list-item v-else prepend-icon="mdi-star" title="Logout" value="logout" :to="{name: 'logout'}"></v-list-item>
-          <v-list-item prepend-icon="mdi-cart" title="Carrito de la compra" value="cart"></v-list-item>
+          <v-list-item prepend-icon="mdi" title="" value="cart"></v-list-item>
         </v-list>
       </v-navigation-drawer>
 

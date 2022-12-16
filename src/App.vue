@@ -2,16 +2,25 @@
 import { RouterLink, RouterView } from 'vue-router'
 import FooterComponent from './components/FooterComponent.vue'
 import HeaderComponent from './components/HeaderComponent.vue'
+
 </script>
 
 <template>
-  <v-app>
+  <v-parallax
+    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+  >
+  <div>
+    <v-app>
     <HeaderComponent />
     
-    <h1><v-icon icon="mdi-Arrow-Decision-Auto-Outline" size="large"></v-icon> OscarArtGallery</h1>
+    <h1> OscarArtGallery</h1>
     <RouterView />
     <FooterComponent />
   </v-app>
+  </div>
+ 
+</v-parallax>
+
 </template>
 
 <style scoped>
