@@ -18,5 +18,8 @@ onBeforeMount(async () => {
 </script>
 
 <template>
+   <v-container>
     <AuthorListComponent v-if="state.allAuthors.length > 0" :authors="state.allAuthors" />
+   </v-container>
+   
 </template>

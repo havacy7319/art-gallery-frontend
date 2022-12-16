@@ -11,7 +11,7 @@ const userStore = useUserStore()
       >
         <v-list>
           <v-list-item
-            prepend-avatar="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
+            :prepend-avatar="userStore.userImg"
             :title="userStore.userName"
             :subtitle="userStore.userEmail"
             :to="{name:'profile'}"

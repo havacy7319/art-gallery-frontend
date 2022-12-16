@@ -10,10 +10,10 @@ import { onBeforeMount } from '@vue/runtime-core';
 
 const props = defineProps(['id'])
 const state = reactive({
-    author:"",
+    author: "",
     items: []
 })
-onBeforeMount( async() => {
+onBeforeMount(async () => {
     state.author = await getAuthor(props.id)
     const items = await getAllItems()
     state.items = items.filter(x => x.author._id == props.id)
@@ -24,8 +24,11 @@ onBeforeMount( async() => {
 </script>
 
 <template>
-    <AuthorComponent  v-if="state.author"  :author="state.author" />
-    <div v-if="state.items.length">hola</div>
-    <ItemListComponent v-if="state.items.length > 0"  :items="state.items"/>
+    <v-container>
+        <AuthorComponent v-if="state.author" :author="state.author" />
+        <div v-if="state.items.length">hola</div>
+        <ItemListComponent v-if="state.items.length > 0" :items="state.items" />
+    </v-container>
+
 </template>
 

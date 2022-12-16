@@ -11,6 +11,7 @@ export const useUserStore = defineStore({
     isUserLogged: (state) => state.user !== null,
     userEmail: (state) => (state.user ? state.user.email : ""),
     userName: (state) => (state.user ? state.user.name : ""),
+    userImg: (state) => (state.user ? state.user.img : ""),
   },
   actions: {
     async doLogin(dataLogin) {

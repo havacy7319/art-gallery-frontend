@@ -13,14 +13,17 @@ onBeforeMount(async () => {
   const items = await getAllItems()
   state.allItems = items
 })
+
 </script>
+
+
 
 <template>
   
 
   <div>
-    <v-carousel :show-arrows="false">
-      <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" cover></v-carousel-item>
+    <v-carousel :show-arrows="true">
+      <v-carousel-item v-for="(item, i) in state.allItems" :key="i" :src="item.img?item.img:'https://images.wondershare.com/repairit/aticle/2021/07/resolve-images-not-showing-problem-1.jpg'" cover></v-carousel-item>
     </v-carousel>
   </div>
   <div>
@@ -136,28 +139,6 @@ onBeforeMount(async () => {
 
 
 
-<script>
-export default {
-  data() {
-    return {
-      items: [
-        {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-        },
-        {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-        },
-        {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-        },
-        {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-        },
-      ],
-    }
-  },
-}
-</script>
 
 <style scoped>
 v-btn {

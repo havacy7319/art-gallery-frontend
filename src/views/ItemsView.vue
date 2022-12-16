@@ -15,7 +15,10 @@ onBeforeMount(async() => {
 </script>
 
 <template>
- <ItemListComponent v-if="state.allItems.length> 0" :items="state.allItems" />
+    <v-container>
+        <ItemListComponent v-if="state.allItems.length> 0" :items="state.allItems" />
+    </v-container>
+ 
 </template>
 
 

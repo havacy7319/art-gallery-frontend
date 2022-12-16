@@ -9,24 +9,38 @@ const state = reactive({
   img: userStore.userLogged.img,
   descriptionShort: userStore.userLogged.descriptionShort,
   description: userStore.userLogged.description,
-  email: userStore.userLogged.email
+  email: userStore.userLogged.email,
+  file: ''
 })
 async function doSave(){
-  await userStore.doUpdate({
-    name: state.name,
-    img: state.img,
-    descriptionShort:state.descriptionShort,
-    description:state.description,
-    email:state.email
-  })
+ readImg()
 }
+function readImg(){
+  if(state.file){
+    const reader = new FileReader()
+    reader.readAsDataURL(state.file[0])
+    reader.onload = async ()=>{
+      if(reader.result){
+        state.img = reader.result
+        await userStore.doUpdate({
+            name: state.name,
+            img: state.img,
+            descriptionShort:state.descriptionShort,
+            description:state.description,
+            email:state.email
+  })
+      }
+    }
+  }
+}
+
 </script>
 
 <template>
   <v-card class="mx-auto" max-width="434" rounded="0">
     <v-img height="100%" cover src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg">
       <v-avatar color="grey" size="150" rounded="0">
-        <v-img cover src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
+        <v-img cover :src="userStore.userLogged.img"></v-img>
       </v-avatar>
       <v-list-item class="text-white" :title="state.name" :subtitle="state.descriptionShort"></v-list-item>
     </v-img>
@@ -42,7 +56,7 @@ async function doSave(){
 
     <v-row>
       <v-col>
-        <v-file-input label="Tu foto" variant="filled" prepend-icon="mdi-camera"></v-file-input>
+        <v-file-input v-model="state.file" label="Tu foto" variant="filled" prepend-icon="mdi-camera"></v-file-input>
       </v-col>
     </v-row>
     <v-row>
