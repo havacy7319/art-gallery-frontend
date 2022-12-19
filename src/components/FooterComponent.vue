@@ -1,6 +1,7 @@
 <template>
-    <v-footer class="d-flex flex-column" app absolute>
-      <div class="bg-teal d-flex w-100 align-center">
+  <v-container app absolute>
+    <v-footer class="d-flex flex-column">
+      <div class="bg-orange d-flex w-100 align-center">
         <strong></strong>
   
         <v-spacer></v-spacer>
@@ -19,6 +20,8 @@
         {{ new Date().getFullYear() }} — <strong>OscarArtGallery</strong>
       </div>
     </v-footer>
+  </v-container>
+   
   </template>
 
 <script>

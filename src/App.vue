@@ -10,16 +10,12 @@ import img from './assets/vac.jpg'
 
 
   <v-app class="app">
-    <v-parallax
-    :src="img"
-  >
-    <HeaderComponent />
-    <h1> OscarArtGallery</h1>
-    <RouterView />
-    <FooterComponent />
-
-    
-  </v-parallax>
+    <v-parallax :src="img">
+      <HeaderComponent />
+      <h1> OscarArtGallery</h1>
+      <RouterView />
+      <FooterComponent />
+    </v-parallax>
   </v-app>
 
 
@@ -37,9 +33,8 @@ h1 {
   background-color: hsl(180, 3%, 6%);
   color: #f0eded;
   text-align: center;
+  
 }
-
-
 </style>
 
 

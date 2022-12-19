@@ -77,7 +77,7 @@ function readImg(){
     
     <v-row>
       <v-col >
-        <v-btn color="secondary" @click="doSave"  >
+        <v-btn color="black" @click="doSave"  >
           Guardar
         </v-btn>
       </v-col>

@@ -19,28 +19,27 @@ onBeforeMount(async () => {
 
 
 <template>
-  
+
 
   <div>
     <v-carousel :show-arrows="true">
-      <v-carousel-item v-for="(item, i) in state.allItems" :key="i" :src="item.img?item.img:'https://images.wondershare.com/repairit/aticle/2021/07/resolve-images-not-showing-problem-1.jpg'" cover></v-carousel-item>
+      <v-carousel-item v-for="(item, i) in state.allItems" :key="i"
+        :src="item.img ? item.img : 'https://images.wondershare.com/repairit/aticle/2021/07/resolve-images-not-showing-problem-1.jpg'"
+        cover></v-carousel-item>
     </v-carousel>
   </div>
-  <div>
 
-  </div>
-
-  <div class="bg-teal d-flex w-100 align-center px-4">
-    <v-btn color="secondary" outline block :to="{ name: 'authors' }">Ver todos los Artistas
+  <div class="bg-orange d-flex w-100 align-center px-4">
+    <v-btn color="#FFC400" outline block :to="{ name: 'authors' }">Ver todos los Artistas
       <v-icon icon='mdi-ArrowDecisionAutoOutline'></v-icon>
     </v-btn>
   </div>
 
-  
+
 
   <ItemListComponent v-if="state.allItems.length" :items="state.allItems" />
-  <div class="bg-teal d-flex w-100 align-center px-4">
-    <v-btn color="secondary" outline block :to="{ name: 'items' }">Explorar todas las Obras</v-btn>
+  <div class="bg-orange d-flex w-100 align-center px-4">
+    <v-btn color="#FFC400" outline block :to="{ name: 'items' }">Explorar todas las Obras</v-btn>
 
   </div>
 
@@ -59,8 +58,13 @@ onBeforeMount(async () => {
             Después de un pequeño entrenamiento sobre el papel con los preciosos consejos técnicos de nuestra experta
             Emma, ​​pasamos a la acción sobre el lienzo.Te vas con tu trabajo y con una experiencia que quedará grabada
             en tu memoria
-            https://www.eventbrite.es/e/entradas-art-wine-paint-like-picasso-483784551617?aff=ebdssbcategorybrowse
+
           </v-card-text>
+          <v-btn
+            href=" https://www.eventbrite.es/e/entradas-art-wine-paint-like-picasso-483784551617?aff=ebdssbcategorybrowse"
+            target="_blank" color="orange-lighten-2" variant="text">
+            <strong>Ir </strong>
+          </v-btn>
         </v-card>
       </v-timeline-item>
 
@@ -77,8 +81,13 @@ onBeforeMount(async () => {
             reúne las obras de 17 artistas nacionales e internacionales en un mismo escenario, un espacio único que une
             la
             distancia entre el muro y el muro interior.
-            https://www.eventbrite.es/e/transitions-tickets-484389160017?aff=ebdssbcategorybrowse&keep_tld=1
+
           </v-card-text>
+          <v-btn
+            href=" https://www.eventbrite.es/e/transitions-tickets-484389160017?aff=ebdssbcategorybrowse&keep_tld=1"
+            target="_blank" color="orange-lighten-2" variant="text">
+            <strong>Ir </strong>
+          </v-btn>
         </v-card>
       </v-timeline-item>
 
@@ -95,8 +104,13 @@ onBeforeMount(async () => {
             mientras disfrutas de los deliciosos vermuts de Las Vermudas acompañados con pica pica.
             Libera tu creatividad, conoce nuevos amigos, brinda con el mejor vermut: vive una experiencia extraordinaria
             y ¡Llévate a casa tu propio cuadro!
-            https://www.eventbrite.es/e/entradas-vermutart-pintura-y-vermut-475143375627?aff=ebdssbcategorybrowse
+
           </v-card-text>
+          <v-btn
+            href="https://www.eventbrite.es/e/entradas-vermutart-pintura-y-vermut-475143375627?aff=ebdssbcategorybrowse"
+            target="_blank" color="orange-lighten-2" variant="text">
+            <strong>Ir </strong>
+          </v-btn>
         </v-card>
       </v-timeline-item>
 
@@ -109,11 +123,16 @@ onBeforeMount(async () => {
             </h2>
           </v-card-title>
           <v-card-text>
-            El hotel Eurostars Monumental 4* de Barcelona acoge la exposición de la artista 
-            francesa Nathalie Liger. Eurostars Hotel Company invita a todos aquellos que, alojados o 
-            no en el hotel, quieran descubrir a la artista y su obra en la inauguración que tendrá lugar 
-            el próximo 20 de enero a las 19h. https://www.eventbrite.es/e/entradas-inauguracion-de-la-artista-nathalie-liger-en-el-eurostars-monumental-4-489365584637?aff=ebdssbcategorybrowse
+            El hotel Eurostars Monumental 4* de Barcelona acoge la exposición de la artista
+            francesa Nathalie Liger. Eurostars Hotel Company invita a todos aquellos que, alojados o
+            no en el hotel, quieran descubrir a la artista y su obra en la inauguración que tendrá lugar
+            el próximo 20 de enero a las 19h.
           </v-card-text>
+          <v-btn
+            href="https://www.eventbrite.es/e/entradas-inauguracion-de-la-artista-nathalie-liger-en-el-eurostars-monumental-4-489365584637?aff=ebdssbcategorybrowse"
+            target="_blank" color="orange-lighten-2" variant="text">
+            <strong>Ir</strong>
+          </v-btn>
         </v-card>
       </v-timeline-item>
 
@@ -127,8 +146,11 @@ onBeforeMount(async () => {
           </v-card-title>
           <v-card-text>
             9 conferencias organizadas en colaboración con la Fundación Amigos del Museo del Prado.
-            https://bilbaomuseoa.eus/ciclo-de-conferencias-francisco-calvo-serraller/
           </v-card-text>
+          <v-btn href="https://bilbaomuseoa.eus/ciclo-de-conferencias-francisco-calvo-serraller/" target="_blank"
+            color="orange-lighten-2" variant="text">
+            <strong>Ir</strong>
+          </v-btn>
         </v-card>
       </v-timeline-item>
     </v-timeline>

@@ -14,7 +14,7 @@ async function doSignup(){
 
 <template>
   <v-card class="elevation-12">
-     <v-toolbar color="secondary">
+     <v-toolbar color="#FFC400">
         <v-toolbar-title>Signup</v-toolbar-title>
      </v-toolbar>
      <v-card-text>
@@ -46,7 +46,7 @@ async function doSignup(){
 
 
         <v-spacer></v-spacer>
-        <v-btn variant="flat"  color="secondary" @click="doSignup" >Signup</v-btn>
+        <v-btn variant="flat"  color="black" @click="doSignup" >Signup</v-btn>
      </v-card-actions>
   </v-card>
 </template>

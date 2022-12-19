@@ -56,13 +56,13 @@ async function doPublish() {
     </v-row>
     <v-row>
       <v-col>
-        <v-file-input v-model="state.file" label="File input" variant="filled" prepend-icon="mdi-camera"></v-file-input>
+        <v-file-input v-model="state.file" label="Archivo" variant="filled" prepend-icon="mdi-camera"></v-file-input>
       </v-col>
     </v-row>
     
     <v-row>
       <v-col>
-        <v-btn @click="doPublish">Publicar</v-btn>
+        <v-btn color="black" @click="doPublish">Publicar</v-btn>
       </v-col>
     </v-row>
 

@@ -1,9 +1,10 @@
 <script setup>
 import { reactive } from "@vue/reactivity";
-import { useUserStore } from '@/stores/user.store'
 import { router } from '@/router'
 
+import { useUserStore } from '@/stores/user.store'
 const userStore = useUserStore()
+
 const state = reactive({
    email: "",
    password: "",
@@ -17,7 +18,7 @@ async function doLogin() {
 
 <template>
    <v-card class="elevation-12">
-      <v-toolbar color="secondary">
+      <v-toolbar color="#FFC400">
          <v-toolbar-title>Login</v-toolbar-title>
          
       </v-toolbar>
@@ -34,7 +35,7 @@ async function doLogin() {
          <span>¿Todavía no estás registrado? <router-link :to="{name: 'signup'}">Registrate</router-link></span>
 
          <v-spacer></v-spacer>
-         <v-btn variant="flat"  color="secondary" @click="doLogin">Login</v-btn>
+         <v-btn variant="flat"  color="black" @click="doLogin">Login</v-btn>
          
       </v-card-actions>
    </v-card>
