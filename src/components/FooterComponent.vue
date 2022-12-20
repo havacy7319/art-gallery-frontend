@@ -1,6 +1,6 @@
 <template>
-  <v-container app absolute>
-    <v-footer class="d-flex flex-column">
+  <v-container>
+    <v-footer class="d-flex flex-column" app absolute>
       <div class="bg-orange d-flex w-100 align-center">
         <strong></strong>
   

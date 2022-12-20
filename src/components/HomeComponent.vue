@@ -22,10 +22,23 @@ onBeforeMount(async () => {
 
 
   <div>
-    <v-carousel :show-arrows="true">
+    <v-carousel height="600" hide-delimiters progress="primary">
+      <v-carousel-item
+     
+    >
+      <v-sheet
+        height="100%"
+      >
+        <div class="d-flex fill-height justify-center align-center">
+          <div class="text-h2">
+           Bienvenidos......
+          </div> 
+        </div>
+      </v-sheet>
+    </v-carousel-item>
       <v-carousel-item v-for="(item, i) in state.allItems" :key="i"
         :src="item.img ? item.img : 'https://images.wondershare.com/repairit/aticle/2021/07/resolve-images-not-showing-problem-1.jpg'"
-        cover></v-carousel-item>
+        eager></v-carousel-item>
     </v-carousel>
   </div>
 
@@ -48,7 +61,7 @@ onBeforeMount(async () => {
       <v-timeline-item dot-color="purple-lighten-2" fill-dot>
         <v-card>
           <v-card-title class="bg-purple-lighten-2">
-            <v-text>20 Diciembre 2022</v-text>
+            <span>20 Diciembre 2022</span>
             <h2 class="font-weight-light">
               Art & Wine : Paint like Picasso
             </h2>
@@ -71,7 +84,7 @@ onBeforeMount(async () => {
       <v-timeline-item dot-color="amber-lighten-1" fill-dot size="x-small">
         <v-card>
           <v-card-title class="bg-amber-lighten-1 justify-end">
-            <v-text>21 Diciembre 2023</v-text>
+            <span>21 Diciembre 2023</span>
             <h2 class="mr-4 font-weight-light">
               TRANSITIONS
             </h2>
@@ -94,7 +107,7 @@ onBeforeMount(async () => {
       <v-timeline-item dot-color="cyan-lighten-1" fill-dot>
         <v-card>
           <v-card-title class="bg-cyan-lighten-1">
-            <v-text>30 Diciembre 2022</v-text>
+            <span>30 Diciembre 2022</span>
             <h2 class="font-weight-light">
               VERMUTART: PINTURA Y VERMUT
             </h2>
@@ -117,7 +130,7 @@ onBeforeMount(async () => {
       <v-timeline-item dot-color="red-lighten-1" fill-dot size="x-small">
         <v-card>
           <v-card-title class="bg-red-lighten-1 justify-end">
-            <v-text>20 Enero 2023</v-text>
+            <span>20 Enero 2023</span>
             <h2 class="mr-4 font-weight-light">
               Inauguración de la artista Nathalie Liger
             </h2>
@@ -139,7 +152,7 @@ onBeforeMount(async () => {
       <v-timeline-item dot-color="green-lighten-1" fill-dot>
         <v-card>
           <v-card-title class="bg-green-lighten-1">
-            <v-text>Del 18 de Enero al 15 de Marzo 2023 </v-text>
+            <span>Del 18 de Enero al 15 de Marzo 2023 </span>
             <h2 class="font-weight-light">
               Pedro Pablo Rubens
             </h2>

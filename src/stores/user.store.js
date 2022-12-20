@@ -23,6 +23,9 @@ export const useUserStore = defineStore({
     },
     async doUpdate(profileData){
       await updateProfile(this.user._id,profileData )
+      this.user.img = profileData.img
+      this.user.description = profileData.description
+      this.user.descriptionShort = profileData.descriptionShort
     }
   },
   persist: {

@@ -1,6 +1,9 @@
 <script setup>
 import { reactive } from "@vue/reactivity";
 import {signUp} from '@/services/user.service'
+import { router } from '@/router'
+
+
 
 const state = reactive({
   name: '',
@@ -9,6 +12,7 @@ const state = reactive({
 })
 async function doSignup(){
   await signUp({name: state.name, email: state.email, password: state.password})
+  router.push('/login')
 }
 </script>
 
@@ -21,8 +25,8 @@ async function doSignup(){
         <v-form>
            <v-text-field v-model="state.name"
               prepend-icon="person"
-              name="login"
-              label="Name"
+              name="Nombre"
+              label="Nombre"
               type="text"
            ></v-text-field>
            <v-text-field v-model="state.email"
@@ -46,7 +50,7 @@ async function doSignup(){
 
 
         <v-spacer></v-spacer>
-        <v-btn variant="flat"  color="black" @click="doSignup" >Signup</v-btn>
+        <v-btn variant="flat"  color="black" @click="doSignup" >Registrarse</v-btn>
      </v-card-actions>
   </v-card>
 </template>

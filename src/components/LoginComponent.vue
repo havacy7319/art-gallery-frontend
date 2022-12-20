@@ -35,7 +35,7 @@ async function doLogin() {
          <span>¿Todavía no estás registrado? <router-link :to="{name: 'signup'}">Registrate</router-link></span>
 
          <v-spacer></v-spacer>
-         <v-btn variant="flat"  color="black" @click="doLogin">Login</v-btn>
+         <v-btn variant="flat"  color="black" @click="doLogin">Acceder</v-btn>
          
       </v-card-actions>
    </v-card>

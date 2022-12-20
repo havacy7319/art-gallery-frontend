@@ -26,7 +26,7 @@ onBeforeMount(async () => {
 <template>
     <v-container>
         <AuthorComponent v-if="state.author" :author="state.author" />
-        <div v-if="state.items.length">hola</div>
+        
         <ItemListComponent v-if="state.items.length > 0" :items="state.items" />
     </v-container>
 

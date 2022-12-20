@@ -2,6 +2,7 @@
 import { reactive } from "@vue/reactivity";
 import { publish } from "@/services/items.service"
 import { useUserStore } from '@/stores/user.store'
+import { router } from '@/router'
 
 
 const userStore = useUserStore()
@@ -24,6 +25,7 @@ function readImg(){
       if(reader.result){
         state.img = reader.result
         await publish({ price: state.price, title: state.title, description: state.description, author: state.author, img: state.img })
+        router.push({name: 'author',params:{id: userStore.userLogged._id}})
       }
     }
   }

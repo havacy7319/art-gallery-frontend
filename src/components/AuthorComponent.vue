@@ -16,7 +16,7 @@
   
       <v-row>
         <v-col>
-          <v-text-field label="Nombre" v-model="author.name"></v-text-field>
+          <v-text-field readonly label="Nombre" v-model="author.name"></v-text-field>
         </v-col>
       </v-row>
   
@@ -27,12 +27,12 @@
       </v-row>
       <v-row>
         <v-col>
-          <v-text-field label="Descripción corta" v-model="author.descriptionShort"></v-text-field>
+          <v-text-field readonly label="Descripción corta" v-model="author.descriptionShort"></v-text-field>
         </v-col>
       </v-row>
       <v-row>
         <v-col>
-          <v-textarea label="Descripción" v-model="author.description"></v-textarea>
+          <v-textarea readonly label="Descripción" v-model="author.description"></v-textarea>
         </v-col>
       </v-row>
       <v-row>

@@ -22,8 +22,6 @@ const cartStore = useCartStore()
         :to="{ name: 'items' }"></v-list-item>
       <v-list-item prepend-icon="mdi-account-circle" title="Artistas" value="arthors"
         :to="{ name: 'authors' }"></v-list-item>
-      <v-list-item prepend-icon="mdi-face" title="Perfil artistas" value="profile"
-        :to="{ name: 'profile' }"></v-list-item>
       <v-list-item prepend-icon="mdi-publish" title="Publicar" value="publish" :to="{ name: 'publish' }"></v-list-item>
       <v-list-item v-if="!userStore.isUserLogged" prepend-icon="mdi-star" title="Acceder/Registrarse" value="login"
         :to="{ name: 'login' }"></v-list-item>

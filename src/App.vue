@@ -33,7 +33,6 @@ h1 {
   background-color: hsl(180, 3%, 6%);
   color: #f0eded;
   text-align: center;
-  
 }
 </style>
 
